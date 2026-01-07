@@ -1,0 +1,61 @@
+/* Confluence Flow Pro Styling */
+
+.cfp-main-btn {
+    background: linear-gradient(135deg, #0052cc 0%, #0071e3 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 82, 204, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    font-family: -apple-system, sans-serif;
+}
+
+.cfp-main-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 82, 204, 0.4);
+    filter: brightness(1.1);
+}
+
+.cfp-main-btn.batch {
+    background: linear-gradient(135deg, #ff8c00 0%, #ff4500 100%);
+}
+
+.cfp-main-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Toast Notification */
+#cfp-toast {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    z-index: 10001;
+    background: #172b4d;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: none;
+    animation: cfp-slide-up 0.3s ease-out;
+}
+
+@keyframes cfp-slide-up {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

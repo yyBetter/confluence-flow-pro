@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Confluence Flow Pro",
+    "version": "1.0",
+    "description": "极速导出 Confluence 页面为 PDF，支持批量下载。",
+    "permissions": [
+        "activeTab",
+        "downloads",
+        "storage"
+    ],
+    "host_permissions": [
+        "https://confluence.zhenguanyu.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://confluence.zhenguanyu.com/pages/viewpage.action*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

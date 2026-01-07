@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 280px;
+            padding: 16px;
+            font-family: -apple-system, sans-serif;
+            background: #f4f5f7;
+            margin: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 16px;
+            color: #172b4d;
+        }
+        .card {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 12px;
+        }
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background: #0052cc;
+            color: white;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #0065ff;
+        }
+        button.secondary {
+            background: #ebecf0;
+            color: #42526e;
+        }
+        button.secondary:hover {
+            background: #dfe1e6;
+        }
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #6b778c;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>🚀 Confluence Flow Pro</h2>
+    </div>
+    
+    <div class="card">
+        <div style="font-size: 13px; color: #42526e; margin-bottom: 8px;">工具箱</div>
+        <div class="btn-group">
+            <button id="batch-mode-btn">开启批量模式 (Sidebar)</button>
+            <button id="md-copy-btn" class="secondary">复制为 Markdown</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        v1.0.0 | 猿编程研发助手
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
