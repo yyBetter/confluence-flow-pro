@@ -57,9 +57,14 @@
 
         // 在父级 li 或最近的容器中寻找 ul > li > a
         const container = activeEl.closest('li') || activeEl.parentElement;
-        const subLinks = container.querySelectorAll('ul a');
+        const currentParams = new URLSearchParams(window.location.search);
+        const currentPageId = currentParams.get('pageId');
 
-        return Array.from(subLinks).filter(a => a.href.includes('pageId='));
+        return Array.from(subLinks).filter(a => {
+            const url = new URL(a.href);
+            const pageId = url.searchParams.get('pageId');
+            return pageId && pageId !== currentPageId;
+        });
     }
 
     function detectSubPages() {
